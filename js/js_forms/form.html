@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration form</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="heading-title">
+    <h1>Please Enter Your Details For Registration!</h1>
+  </div>
+  <form id="customForm" name="customForm" action="thanks.html" method="post" onsubmit="return checkValidations()">
+    <div class="form-section">
+      <p>Your Face</p>
+      <div class="form-fields">
+        <p>
+          <label for="file-select">Your image<span class="asterisk">*</span>:</label>
+          <input type="file" name="upload" id="imgFile" onchange="previewFile()">
+          <span class="error-file"></span>
+        </p>
+        <p>
+          <label for="image-preview">Image preview:</label>
+          <img id="preview" src="" alt="Preview">
+        </p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>Your General Details</p>
+      <div class="form-fields">
+        <p>
+          <label for="name">Name<span class="asterisk">*</span>:</label>
+          <input type="text" name="name" placeholder="Enter full name">
+          <span class="error-name"></span>
+        </p>
+        <p>
+          <label for="gender">Gender<span class="asterisk">*</span>:</label>
+          <input type="radio" name="gender"> Male
+          <input type="radio" name="gender"> Female
+          <span class="error-gender"></span>
+        </p>
+        <p>
+          <label for="age">Age<span class="asterisk">*</span>:</label>
+          <input type="number" name="age" min="1">
+          <span class="error-age"></span>
+        <p>
+          <label for="date">Date of birth<span class="asterisk">*</span>:</label>
+          <input type="date" name="dob" placeholder="dd/mm/yyyy">
+          <span class="error-dob"></span>
+        </p>
+        <p>
+          <label for="favcolor">Favourite color:</label>
+          <input type="color" name="favcolor" value="#000000">
+        </p>
+        <p>
+          <label for="country">Which country<span class="asterisk">*</span>:</label>
+          <select name="country">
+            <option value="">Select country</option>
+            <option value="ind">India</option>
+            <option value="aus">Australia</option>
+            <option value="nz">New Zealand</option>
+            <option value="gm">Germany</option>
+          </select>
+          <a href="#" title="Select a country from which you belong." class="help-tip">&quest;</a>
+          <span class="error-country"></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>Your Indicators</p>
+      <div class="form-fields">
+        <p>
+          <label for="height">Height:</label>
+          <span class="low">Short</span>
+          <input type="range" name="height">
+          <span class="high">Tall</span>
+        </p>
+        <p>
+          <label for="salary">Salary:</label>
+          <span class="low">Poor</span>
+          <input type="range" name="salary">
+          <span class="high">Rich</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>Your Contact Information</p>
+      <div class="form-fields">
+        <p>
+          <label for="email">Email<span class="asterisk">*</span>:</label>
+          <input type="email" name="email" >
+          <span class="error-email"></span>
+        </p>
+        <p>
+          <label for="mobile">Mobile<span class="asterisk">*</span>:</label>
+          <input type="text" name="mobile">
+          <span class="error-mobile"></span>
+        </p>
+        <p>
+          <label for="address">Address:</label>
+          <textarea rows="3" cols="50" name="address"></textarea>
+        </p>
+        <p>
+          <label for="contact">Method to contact you<span class="asterisk">*</span>:</label>
+          <input type="checkbox" name="email2">
+          <span>Email</span>
+          <input type="checkbox" name="whatsapp">
+          <span>Whatsapp</span>
+          <input type="checkbox" name="sports">
+          <span>In-app chat</span>
+          <span class="error-contact"></span>
+        </p>
+      </div>
+    </div>
+    <input type="submit" name="submit" value="submit">
+  </form>
+  <script type="text/javascript" src="assets/js/myScript.js"></script>
+</body>
+</html>
