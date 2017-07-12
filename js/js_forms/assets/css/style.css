@@ -1,11 +1,9 @@
 div.form-section {
   background-color: #FFFC33;
-  height: 80%;
-  width: 100%;
+  border-bottom: 1px solid #FFFC33;
 }
 div.form-fields {
   background-color: #FEFBC2;
-  height: 72%;
   margin-bottom: 18px;
   margin-left: 18px;
   padding: 1% 10% 2% 0;
@@ -31,7 +29,7 @@ p {
 }
 label {
   display: inline-block;
-  width: 15%;
+  width: 16%;
   text-align: right;
 }
 input[type="number"] {
@@ -39,4 +37,10 @@ input[type="number"] {
 }
 label[for="address"] {
   float: left;
+}
+[class^="error-"], .asterisk {
+    color: red;
+}
+#preview {
+    width: 200px;
 }

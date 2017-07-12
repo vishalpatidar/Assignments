@@ -10,17 +10,18 @@
   <div class="heading-title">
     <h1>Please Enter Your Details For Registration!</h1>
   </div>
-  <form name="customForm" action="thanks.html" method="post" onsubmit="return validate()">
+  <form id="customForm" name="customForm" action="thanks.html" method="post" onsubmit="return checkValidations()">
     <div class="form-section">
       <p>Your Face</p>
       <div class="form-fields">
         <p>
-          <label for="file-select">Your image:</label>
-          <input type="file" name="upload" id="file-select">
-          <span class="error"></span>
+          <label for="file-select">Your image<span class="asterisk">*</span>:</label>
+          <input type="file" name="upload" id="imgFile" onchange="previewFile()">
+          <span class="error-file"></span>
         </p>
         <p>
           <label for="image-preview">Image preview:</label>
+          <img id="preview" src="" alt="Preview">
         </p>
       </div>
     </div>
@@ -29,33 +30,32 @@
       <p>Your General Details</p>
       <div class="form-fields">
         <p>
-          <label for="name">Name:</label>
-          <input type="text" name="name" id="name" placeholder="Enter full name" required>
-          <span class="error"></span>
+          <label for="name">Name<span class="asterisk">*</span>:</label>
+          <input type="text" name="name" placeholder="Enter full name">
+          <span class="error-name"></span>
         </p>
         <p>
-          <label for="gender">Gender:</label>
-          <input type="radio" name="gender" id="male"> Male
-          <input type="radio" name="gender" id="female"> Female
-          <span class="error"></span>
+          <label for="gender">Gender<span class="asterisk">*</span>:</label>
+          <input type="radio" name="gender"> Male
+          <input type="radio" name="gender"> Female
+          <span class="error-gender"></span>
         </p>
         <p>
-          <label for="age">Age:</label>
+          <label for="age">Age<span class="asterisk">*</span>:</label>
           <input type="number" name="age" min="1">
-          <span class="error"></span>
+          <span class="error-age"></span>
         <p>
-          <label for="date">Date of birth:</label>
-          <input type="date" name="date" placeholder="dd/mm/yyyy">
-          <span class="error"></span>
+          <label for="date">Date of birth<span class="asterisk">*</span>:</label>
+          <input type="date" name="dob" placeholder="dd/mm/yyyy">
+          <span class="error-dob"></span>
         </p>
         <p>
           <label for="favcolor">Favourite color:</label>
           <input type="color" name="favcolor" value="#000000">
-          <span class="error"></span>
         </p>
         <p>
-          <label for="country">Which country:</label>
-          <select name="country" id="country">
+          <label for="country">Which country<span class="asterisk">*</span>:</label>
+          <select name="country">
             <option value="">Select country</option>
             <option value="ind">India</option>
             <option value="aus">Australia</option>
@@ -63,7 +63,7 @@
             <option value="gm">Germany</option>
           </select>
           <a href="#" title="Select a country from which you belong." class="help-tip">&quest;</a>
-          <span class="error"></span>
+          <span class="error-country"></span>
         </p>
       </div>
     </div>
@@ -90,28 +90,28 @@
       <p>Your Contact Information</p>
       <div class="form-fields">
         <p>
-          <label for="email">Email:</label>
-          <input type="email" name="email" required>
-          <span class="error"></span>
+          <label for="email">Email<span class="asterisk">*</span>:</label>
+          <input type="email" name="email" >
+          <span class="error-email"></span>
         </p>
         <p>
-          <label for="mobile">Mobile:</label>
+          <label for="mobile">Mobile<span class="asterisk">*</span>:</label>
           <input type="text" name="mobile">
-          <span class="error"></span>
+          <span class="error-mobile"></span>
         </p>
         <p>
           <label for="address">Address:</label>
           <textarea rows="3" cols="50" name="address"></textarea>
         </p>
         <p>
-          <label for="contact">Method to contact you:</label>
-          <input type="checkbox" name="email">
+          <label for="contact">Method to contact you<span class="asterisk">*</span>:</label>
+          <input type="checkbox" name="email2">
           <span>Email</span>
           <input type="checkbox" name="whatsapp">
           <span>Whatsapp</span>
           <input type="checkbox" name="sports">
           <span>In-app chat</span>
-          <span class="error"></span>
+          <span class="error-contact"></span>
         </p>
       </div>
     </div>
